@@ -4,6 +4,7 @@ import './modules/layout/index.css';
 import './modules/align/index.css';
 import './modules/margin/index.css';
 import './modules/padding/index.css';
+import './modules/grid/index.css';
 import './modules/flexbox/index.css';
 import './modules/position/index.css';
 import './modules/border/index.css';
