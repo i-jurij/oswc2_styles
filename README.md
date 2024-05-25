@@ -4,4 +4,7 @@ using [Rollup](https://rollupjs.org/) and [rollup-plugin-css-porter](https://git
 
 !!! Deleted "grid" from BassCSS   
 
+BassCSS using for functionality (typo, margin, padding, display ... ).   
+Picnic using for components (buttons, forms, cards, blocks ...).
+
 The rest did not change.
