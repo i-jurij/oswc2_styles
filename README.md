@@ -8,7 +8,3 @@ BassCSS using for functionality (typo, margin, padding, display ... ).
 Picnic using for components (buttons, forms, cards, blocks ...).
 
 The rest did not change.
-
-If you will change this - rename no_package.json right   
-and `npm install`   
-then rewrite it and `npm rollup --config`
