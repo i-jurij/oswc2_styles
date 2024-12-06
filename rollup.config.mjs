@@ -3,8 +3,8 @@ import css from 'rollup-plugin-css-porter';
 export default {
 	input: 'src/app.js',
   	plugins: [ css({
-   	raw: 'oswc2.css',
-    	minified: 'oswc2.min.css',
+   	raw: 'oswc.css',
+    	minified: 'oswc.min.css',
   	}) ],
   	output: [
 		{

@@ -1,8 +1,8 @@
 {
-  "name": "oswc2_styles",
+  "name": "oswc_styles",
   "version": "1.0.0",
   "description": "Collection of styles",
-  "main": "oswc2.css",
+  "main": "oswc.css",
   "author": "",
   "license": "MIT",
   "devDependencies": {
