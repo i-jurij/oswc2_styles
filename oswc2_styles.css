@@ -87,53 +87,52 @@
   --h6: .75rem;
 }
 
-/* Basscss Typography */
+/* Basscss Layout */
 
-.font-family-inherit { font-family: inherit }
-.font-size-inherit { font-size: inherit }
-.text-decoration-none { text-decoration: none }
+.inline       { display: inline }
+.block        { display: block }
+.inline-block { display: inline-block }
+.table        { display: table }
+.table-cell   { display: table-cell }
 
-.bold    { font-weight: var(--bold-font-weight, bold) }
-.regular { font-weight: normal }
-.italic  { font-style: italic }
-.caps    { text-transform: uppercase; letter-spacing: var(--caps-letter-spacing); }
+.overflow-hidden { overflow: hidden }
+.overflow-scroll { overflow: scroll }
+.overflow-auto   { overflow: auto }
 
-.left-align   { text-align: left }
-.center       { text-align: center }
-.right-align  { text-align: right }
-.justify      { text-align: justify }
-
-.nowrap { white-space: nowrap }
-.break-word { word-wrap: break-word }
-
-.line-height-1 { line-height: var(--line-height-1) }
-.line-height-2 { line-height: var(--line-height-2) }
-.line-height-3 { line-height: var(--line-height-3) }
-.line-height-4 { line-height: var(--line-height-4) }
-
-.list-style-none { list-style: none }
-.underline { text-decoration: underline }
-
-.truncate {
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table
 }
+.clearfix:after { clear: both }
 
-.list-reset {
-  list-style: none;
-  padding-left: 0;
-}
+.left  { float: left }
+.right { float: right }
+
+.fit { max-width: 100% }
+
+.max-width-1 { max-width: var(--width-1) }
+.max-width-2 { max-width: var(--width-2) }
+.max-width-3 { max-width: var(--width-3) }
+.max-width-4 { max-width: var(--width-4) }
+
+.border-box { box-sizing: border-box }
 
 :root {
-  --line-height-1: 1;
-  --line-height-2: 1.125;
-  --line-height-3: 1.25;
-  --line-height-4: 1.5;
-  --caps-letter-spacing: .2em;
-  --bold-font-weight: bold;
+  --width-1: 24rem;
+  --width-2: 32rem;
+  --width-3: 48rem;
+  --width-4: 64rem;
 }
+
+
+/* Basscss Align */
+
+.align-baseline { vertical-align: baseline }
+.align-top      { vertical-align: top }
+.align-middle   { vertical-align: middle }
+.align-bottom   { vertical-align: bottom }
+
 
 /* Basscss Margin */
 
@@ -197,52 +196,53 @@
   --space-4: 4rem;
 }
 
-/* Basscss Layout */
+/* Basscss Typography */
 
-.inline       { display: inline }
-.block        { display: block }
-.inline-block { display: inline-block }
-.table        { display: table }
-.table-cell   { display: table-cell }
+.font-family-inherit { font-family: inherit }
+.font-size-inherit { font-size: inherit }
+.text-decoration-none { text-decoration: none }
 
-.overflow-hidden { overflow: hidden }
-.overflow-scroll { overflow: scroll }
-.overflow-auto   { overflow: auto }
+.bold    { font-weight: var(--bold-font-weight, bold) }
+.regular { font-weight: normal }
+.italic  { font-style: italic }
+.caps    { text-transform: uppercase; letter-spacing: var(--caps-letter-spacing); }
 
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table
+.left-align   { text-align: left }
+.center       { text-align: center }
+.right-align  { text-align: right }
+.justify      { text-align: justify }
+
+.nowrap { white-space: nowrap }
+.break-word { word-wrap: break-word }
+
+.line-height-1 { line-height: var(--line-height-1) }
+.line-height-2 { line-height: var(--line-height-2) }
+.line-height-3 { line-height: var(--line-height-3) }
+.line-height-4 { line-height: var(--line-height-4) }
+
+.list-style-none { list-style: none }
+.underline { text-decoration: underline }
+
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.clearfix:after { clear: both }
 
-.left  { float: left }
-.right { float: right }
-
-.fit { max-width: 100% }
-
-.max-width-1 { max-width: var(--width-1) }
-.max-width-2 { max-width: var(--width-2) }
-.max-width-3 { max-width: var(--width-3) }
-.max-width-4 { max-width: var(--width-4) }
-
-.border-box { box-sizing: border-box }
+.list-reset {
+  list-style: none;
+  padding-left: 0;
+}
 
 :root {
-  --width-1: 24rem;
-  --width-2: 32rem;
-  --width-3: 48rem;
-  --width-4: 64rem;
+  --line-height-1: 1;
+  --line-height-2: 1.125;
+  --line-height-3: 1.25;
+  --line-height-4: 1.5;
+  --caps-letter-spacing: .2em;
+  --bold-font-weight: bold;
 }
-
-
-/* Basscss Align */
-
-.align-baseline { vertical-align: baseline }
-.align-top      { vertical-align: top }
-.align-middle   { vertical-align: middle }
-.align-bottom   { vertical-align: bottom }
-
 
 /* Basscss Padding */
 
