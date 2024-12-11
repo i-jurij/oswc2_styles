@@ -1,4 +1,3 @@
-import './modules/root_and_dark_light_mode.css';
 import './modules/type-scale/index.css';
 import './modules/typography/index.css';
 import './modules/layout/index.css';
@@ -12,4 +11,5 @@ import './modules/border/index.css';
 import './modules/hide/index.css';
 import './modules/picnic/picnic.css';
 import './modules/mrmrs-colors/colors.css';
+import './modules/root.css';
 console.info('Ok');
