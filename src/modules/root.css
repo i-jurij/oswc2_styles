@@ -102,7 +102,7 @@ button[disabled],
 input,
 textarea,
 .select select {
-    border: 1px solid rgb(164, 164, 164, 1);
+    border: 1px solid rgb(144, 144, 144, 1);
     border-radius: var(--radius);
     background-color: var(--input_bgcolor);
     /* background-clip: padding-box; */
@@ -186,20 +186,20 @@ nav .show:checked~.burger {
 .modal .overlay~*,
 .card {
     background: var(--bgcolor-content);
-    -webkit-box-shadow: 0px 0px 1px 0px rgba(164, 164, 164, 1) inset;
-    -moz-box-shadow: 0px 0px 1px 0px rgba(164, 164, 164, 1) inset;
-    box-shadow: 0px 0px 1px 0px rgba(164, 164, 164, 1) inset;
-    border: 1px solid rgb(164, 164, 164, 1);
+    -webkit-box-shadow: 0px 0px 1px 0px rgba(144, 144, 144, 1) inset;
+    -moz-box-shadow: 0px 0px 1px 0px rgba(144, 144, 144, 1) inset;
+    box-shadow: 0px 0px 1px 0px rgba(144, 144, 144, 1) inset;
+    border: 1px solid rgb(144, 144, 144, 1);
 }
 
 .modal .overlay~* hr,
 .card hr {
-    background-color: rgb(164, 164, 164, 1);
+    background-color: rgb(144, 144, 144, 1);
 }
 
 .modal .overlay~* header,
 .card header {
-    border-bottom: 1px solid rgb(164, 164, 164, 1);
+    border-bottom: 1px solid rgb(144, 144, 144, 1);
 }
 
 .modal .overlay~* .dangerous,
