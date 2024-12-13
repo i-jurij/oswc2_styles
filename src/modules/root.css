@@ -41,11 +41,11 @@
 
     --date_time_item_back: #535353;
     --date_time_item_back-active: #9F091F;
-    --date_time_item_back-disabled: #353941;
+    --date_time_item_back-disabled: #364135;
     --date_time_item_color-disabled: #676767;
 
-    --table-bgcolor1: #282C34;
-    --table-bgcolor2: #161B23;
+    --table-bgcolor1: #2b3428;
+    --table-bgcolor2: #192316;
 
     --table-border: 1px solid #000;
 }
@@ -89,6 +89,7 @@ button,
 [data-tooltip]:after {
     background: var(--button-bgcolor);
     color: var(--button-color);
+    box-shadow: 0 0 rgba(17, 17, 17, 0) inset;
 }
 
 .dropimage:hover,
@@ -117,6 +118,13 @@ textarea,
     border-radius: var(--radius);
     background-color: var(--input_bgcolor);
     /* background-clip: padding-box; */
+}
+
+input:focus,
+textarea:focus,
+.select select:focus {
+    border: 1px solid #1e8c00;
+    outline: 0;
 }
 
 input[type="number"]:invalid,
