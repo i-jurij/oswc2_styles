@@ -23,14 +23,14 @@
     --smallest-fontsize: 0.75rem;
     --micro-fontsize: 0.625rem;
     --radius: 0.4rem;
-    --bgcolor: #126c04;
-    --bgcolor-content: #2a3428;
-    --button-bgcolor: #126c04;
+    --bgcolor: #135e07;
+    --bgcolor-content: #21281f;
+    --button-bgcolor: #135e07;
     --button-color: #d3e4bb;
-    --button-active-bgcolor: #000000;
+    --button-active-bgcolor: #000000c8;
     --button-active-color: #9eb183;
     --button-disabled-color: black;
-    --input_bgcolor: rgb(0, 0, 0);
+    --input_bgcolor: rgb(6, 9, 3);
 
     --fontcolor-light: #c0ccb9;
     --fontcolor-dark: #1CBADF;
@@ -88,7 +88,18 @@ button,
 .label,
 [data-tooltip]:after {
     background: var(--button-bgcolor);
-    color: var(--button-color, white);
+    color: var(--button-color);
+}
+
+.dropimage:hover,
+button:hover,
+.button:hover,
+[type=submit]:hover,
+.dropimage:focus,
+button:focus,
+.button:focus,
+[type=submit]:focus {
+    box-shadow: inset 0 0 0 99em rgba(5, 19, 0, 0.2);
 }
 
 [disabled].dropimage,
@@ -204,7 +215,7 @@ nav .show:checked~.burger {
 
 .modal .overlay~* .dangerous,
 .card .dangerous {
-    background: #ef2c00;
+    background: #be2502;
 }
 
 .modal .overlay {
