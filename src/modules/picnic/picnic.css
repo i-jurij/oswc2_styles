@@ -128,8 +128,9 @@ h1 {
  * Address styling not present in IE 8/9.
  */
 mark {
-  background: #fff;
-  color: #111;
+  background-color: rgb(116, 183, 44);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
 }
 
 /**
@@ -385,16 +386,17 @@ th {
 
 html,
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'local', system-ui, sans-serif;
   box-sizing: border-box;
   height: 100%;
 }
 
 body {
-  color: #111;
+  color: var(--fontcolor-light);
   font-size: 1.1em;
   line-height: 1.5;
-  background: #fff;
+  background: var(--bgcolor-content);
+  text-shadow: var(--fontshadow);
 }
 
 main {
@@ -425,13 +427,13 @@ a {
 code {
   padding: 0.3em 0.6em;
   font-size: 0.8em;
-  background: #f5f5f5;
+  background: var(--bgcolor);
 }
 
 pre {
   text-align: left;
   padding: 0.3em;
-  background: #f5f5f5;
+  background: var(--bgcolor);
   border-radius: 0.2em;
 }
 
@@ -471,8 +473,9 @@ button,
   margin: 0;
   padding: 0.3em 0.9em;
   vertical-align: middle;
-  background: #0074d9;
-  color: #fff;
+  background: var(--button-bgcolor);
+  color: var(--button-color);
+  box-shadow: 0 0 rgba(17, 17, 17, 0) inset;
   border: 0;
   border-radius: 0.2em;
   width: auto;
@@ -519,6 +522,7 @@ button.pseudo,
 .pseudo[data-tooltip]:after {
   background-color: transparent;
   color: inherit;
+  box-shadow: 0 0 0;
 }
 
 .label,
@@ -550,7 +554,7 @@ button:hover,
 button:focus,
 .button:focus,
 [type=submit]:focus {
-  box-shadow: inset 0 0 0 99em rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 0 99em rgba(5, 19, 0, 0.2);
   border: 0;
 }
 
@@ -582,7 +586,8 @@ button[disabled],
 [disabled][type=submit] {
   cursor: default;
   box-shadow: none;
-  background: #aaa;
+  background: var(--bgcolor-content);
+  color: var(--button-disabled-color);
 }
 
 :checked+.toggle,
@@ -607,9 +612,9 @@ textarea,
   margin: 0;
   height: 2.1em;
   padding: 0.3em 0.6em;
-  border: 1px solid #aaa;
-  background-color: #fff;
-  border-radius: 0.2em;
+  border: 1px solid #353535;
+  border-radius: var(--radius);
+  background-color: var(--input_bgcolor);
   transition: all 0.3s;
   width: 100%;
 }
@@ -617,7 +622,7 @@ textarea,
 input:focus,
 textarea:focus,
 .select select:focus {
-  border: 1px solid #0074d9;
+  border: 1px solid #1b7c00;
   outline: 0;
 }
 
@@ -656,7 +661,7 @@ select::-ms-expand {
 
 select:focus,
 select:active {
-  border: 1px solid #0074d9;
+  border: 1px solid #1b7c00;
   transition: outline 0s;
 }
 
@@ -688,7 +693,7 @@ select[multiple] {
 [type=radio]+.checkable:hover:before,
 [type=checkbox]:focus+.checkable:before,
 [type=radio]:focus+.checkable:before {
-  border: 1px solid #0074d9;
+  border: 2px solid #09b500;
 }
 
 [type=checkbox]+.checkable,
@@ -728,7 +733,7 @@ select[multiple] {
 
 [type=checkbox]:checked+.checkable:after,
 [type=radio]:checked+.checkable:after {
-  background: #111;
+  background: #1a9d00;
   transform: scale(0.5) translateY(-100%);
 }
 
@@ -765,8 +770,8 @@ th {
 th {
   text-align: left;
   font-weight: 900;
-  color: #fff;
-  background-color: #0074d9;
+  background-color: var(--bgcolor-content);
+  color: var(--fontcolor-light);
 }
 
 .success th {
@@ -786,7 +791,7 @@ th {
 }
 
 tr:nth-child(even) {
-  background: rgba(17, 17, 17, 0.05);
+  background: var(--table-bgcolor2);
 }
 
 .flexx {
@@ -3520,8 +3525,8 @@ nav {
   right: 0;
   height: 3em;
   padding: 0 0.6em;
-  background: #fff;
-  box-shadow: 0 0 0.2em rgba(170, 170, 170, 0.2);
+  background: var(--bgcolor-content);
+  box-shadow: var(--boxshadow);
   z-index: 10000;
   transition: all 0.3s;
   transform-style: preserve-3d;
@@ -3586,7 +3591,7 @@ nav .burger {
     right: 0;
     bottom: -1000em;
     margin: 0;
-    background: #fff;
+    background: var(--bgcolor-content);
     transition: all 0.5s ease;
     transform: none;
   }
@@ -3599,7 +3604,7 @@ nav .burger {
     color: transparent;
     width: 100%;
     border-radius: 0;
-    background: rgba(17, 17, 17, 0.2);
+    background: var(--bgcolor);
     transition: all 0.5s ease;
   }
 
@@ -3716,7 +3721,7 @@ select.stack:focus+select {
   border: 1px solid #aaa;
   overflow: hidden;
   text-align: left;
-  background: #fff;
+  background: var(--bgcolor-content);
   margin-bottom: 0.6em;
   padding: 0;
   transition: all 0.3s ease;
@@ -3762,14 +3767,14 @@ select.stack:focus+select {
 .card hr {
   border: none;
   height: 1px;
-  background-color: #aaa;
+  background-color: rgb(104, 104, 104, 1);
 }
 
 .modal .overlay~* header,
 .card header {
   font-weight: bold;
   position: relative;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid rgb(104, 104, 104, 1);
 }
 
 .modal .overlay~* header h1,
@@ -3835,7 +3840,7 @@ select.stack:focus+select {
 
 .modal .overlay~* .close:hover,
 .card .close:hover {
-  color: #ff4136;
+  color: #be2502;
 }
 
 .modal .overlay~* h1+.close,
@@ -3850,7 +3855,7 @@ select.stack:focus+select {
 
 .modal .overlay~* .dangerous,
 .card .dangerous {
-  background: #ff4136;
+  background: #be2502;
   float: right;
 }
 
@@ -3876,7 +3881,7 @@ select.stack:focus+select {
   position: fixed;
   margin: 0;
   border-radius: 0;
-  background: rgba(17, 17, 17, 0.2);
+  background: rgba(17, 17, 17, 0.4);
   transition: all 0.3s;
   z-index: 100000;
 }
@@ -3926,7 +3931,7 @@ select.stack:focus+select {
   border: 0;
   margin: 0.3em 0;
   border-radius: 0.2em;
-  background-color: #ddd;
+  background-color: var(--bgcolor);
   background-size: cover;
   background-position: center center;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NDAiIGhlaWdodD0iNjQwIiB2ZXJzaW9uPSIxLjEiPjxnIHN0eWxlPSJmaWxsOiMzMzMiPjxwYXRoIGQ9Ik0gMTg3IDIzMCBDIDE3NSAyMzAgMTY1IDI0MCAxNjUgMjUyIEwgMTY1IDMwMCBMIDE2NSA0MDggQyAxNjUgNDIwIDE3NSA0MzAgMTg3IDQzMCBMIDQ2MyA0MzAgQyA0NzUgNDMwIDQ4NSA0MjAgNDg1IDQwOCBMIDQ4NSAzMDAgTCA0ODUgMjUyIEMgNDg1IDI0MCA0NzUgMjMwIDQ2MyAyMzAgTCAxODcgMjMwIHogTSAzNjAgMjU2IEEgNzAgNzIgMCAwIDEgNDMwIDMyOCBBIDcwIDcyIDAgMCAxIDM2MCA0MDAgQSA3MCA3MiAwIDAgMSAyOTAgMzI4IEEgNzAgNzIgMCAwIDEgMzYwIDI1NiB6Ii8+PGNpcmNsZSBjeD0iMzYwIiBjeT0iMzMwIiByPSI0MSIvPjxwYXRoIGQ9Im0yMDUgMjI1IDUtMTAgMjAgMCA1IDEwLTMwIDAiLz48cGF0aCBkPSJNMjg1IDIwMEwyNzAgMjI1IDM3NiAyMjUgMzYxIDIwMCAyODUgMjAwek0zMTAgMjA1TDMzNyAyMDUgMzM3IDIxOCAzMTAgMjE4IDMxMCAyMDV6Ii8+PHBhdGggZD0ibTQwNSAyMjUgNS0xMCAyMCAwIDUgMTAtMzAgMCIvPjwvZz48L3N2Zz4=);

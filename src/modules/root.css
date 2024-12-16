@@ -50,83 +50,11 @@
     --table-border: 1px solid #000;
 }
 
-mark {
-    background-color: rgb(116, 183, 44);
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-}
-
 html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-html,
-body {
-    font-family: 'local', system-ui, sans-serif;
-    background-color: var(--bgcolor-content);
-    color: var(--fontcolor-light);
-    text-shadow: var(--fontshadow);
-}
-
-.pseudo {
-    box-shadow: 0 0 0;
-}
-
-code {
-    background: var(--bgcolor);
-}
-
-pre {
-    background: var(--bgcolor);
-}
-
-.dropimage,
-button,
-.button,
-[type=submit],
-.label,
-[data-tooltip]:after {
-    background: var(--button-bgcolor);
-    color: var(--button-color);
-    box-shadow: 0 0 rgba(17, 17, 17, 0) inset;
-}
-
-.dropimage:hover,
-button:hover,
-.button:hover,
-[type=submit]:hover,
-.dropimage:focus,
-button:focus,
-.button:focus,
-[type=submit]:focus {
-    box-shadow: inset 0 0 0 99em rgba(5, 19, 0, 0.2);
-}
-
-[disabled].dropimage,
-button[disabled],
-[disabled].button,
-[disabled][type=submit] {
-    background: var(--bgcolor-content);
-    color: var(--button-disabled-color);
-}
-
-input,
-textarea,
-.select select {
-    border: 1px solid rgb(104, 104, 104, 1);
-    border-radius: var(--radius);
-    background-color: var(--input_bgcolor);
-    /* background-clip: padding-box; */
-}
-
-input:focus,
-textarea:focus,
-.select select:focus,
-select:focus,
-select:active {
-    border: 1px solid #1b7c00;
-}
 
 input[type="number"]:invalid,
 input[type="time"]:invalid,
@@ -149,11 +77,6 @@ textarea:valid {
 }
 
 .select {
-    border: 1px solid #353535;
-    border-radius: var(--radius);
-    font-size: var(--base-fontsize);
-    font-family: inherit;
-    color: inherit;
     background-color: var(--input_bgcolor);
     background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236D6D6D%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, #333b33 0%, #030702 100%);
     background-repeat: no-repeat, repeat;
@@ -176,61 +99,14 @@ table {
     border: var(--table-border);
 }
 
-th {
-    background-color: var(--bgcolor-content);
-    color: var(--fontcolor-light);
-}
-
 tr {
     background: var(--table-bgcolor1);
 }
 
-tr:nth-child(even) {
-    background: var(--table-bgcolor2);
-}
-
-nav {
-    background: var(--bgcolor-content);
-    box-shadow: var(--boxshadow);
-}
-
-nav .burger~.menu,
-nav .show:checked~.burger {
-    background: var(--bgcolor-content);
-}
-
-nav .show:checked~.burger {
-    background: var(--bgcolor);
-}
-
 .modal .overlay~*,
 .card {
-    background: var(--bgcolor-content);
     -webkit-box-shadow: 0px 0px 1px 0px rgba(104, 104, 104, 1) inset;
     -moz-box-shadow: 0px 0px 1px 0px rgba(104, 104, 104, 1) inset;
     box-shadow: 0px 0px 1px 0px rgba(104, 104, 104, 1) inset;
     /* border: 1px solid rgb(104, 104, 104, 1); */
-}
-
-.modal .overlay~* hr,
-.card hr {
-    background-color: rgb(104, 104, 104, 1);
-}
-
-.modal .overlay~* header,
-.card header {
-    border-bottom: 1px solid rgb(104, 104, 104, 1);
-}
-
-.modal .overlay~* .dangerous,
-.card .dangerous {
-    background: #be2502;
-}
-
-.modal .overlay {
-    background: rgba(17, 17, 17, 0.4);
-}
-
-.dropimage {
-    background-color: var(--bgcolor);
 }
