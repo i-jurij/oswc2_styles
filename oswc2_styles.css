@@ -1,73 +1,3 @@
-/* Basscss Type Scale */
-
-.h00 { font-size: var(--h00) }
-.h0 { font-size: var(--h0) }
-.h1 { font-size: var(--h1) }
-.h2 { font-size: var(--h2) }
-.h3 { font-size: var(--h3) }
-.h4 { font-size: var(--h4) }
-.h5 { font-size: var(--h5) }
-.h6 { font-size: var(--h6) }
-
-:root {
-  --h00: 4rem;
-  --h0: 3rem;
-  --h1: 2rem;
-  --h2: 1.5rem;
-  --h3: 1.25rem;
-  --h4: 1rem;
-  --h5: .875rem;
-  --h6: .75rem;
-}
-
-/* Basscss Typography */
-
-.font-family-inherit { font-family: inherit }
-.font-size-inherit { font-size: inherit }
-.text-decoration-none { text-decoration: none }
-
-.bold    { font-weight: var(--bold-font-weight, bold) }
-.regular { font-weight: normal }
-.italic  { font-style: italic }
-.caps    { text-transform: uppercase; letter-spacing: var(--caps-letter-spacing); }
-
-.left-align   { text-align: left }
-.center       { text-align: center }
-.right-align  { text-align: right }
-.justify      { text-align: justify }
-
-.nowrap { white-space: nowrap }
-.break-word { word-wrap: break-word }
-
-.line-height-1 { line-height: var(--line-height-1) }
-.line-height-2 { line-height: var(--line-height-2) }
-.line-height-3 { line-height: var(--line-height-3) }
-.line-height-4 { line-height: var(--line-height-4) }
-
-.list-style-none { list-style: none }
-.underline { text-decoration: underline }
-
-.truncate {
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.list-reset {
-  list-style: none;
-  padding-left: 0;
-}
-
-:root {
-  --line-height-1: 1;
-  --line-height-2: 1.125;
-  --line-height-3: 1.25;
-  --line-height-4: 1.5;
-  --caps-letter-spacing: .2em;
-  --bold-font-weight: bold;
-}
-
 /* PICNIC CSS */
 /**
  * 1. Set default font family to sans-serif.
@@ -803,6 +733,7 @@ select[multiple] {
 
 [type=checkbox]:checked+.checkable:after,
 [type=radio]:checked+.checkable:after {
+  border: 1px solid #09b500;
   background: #1a9d00;
   transform: scale(0.5) translateY(-100%);
 }
@@ -820,7 +751,7 @@ select[multiple] {
 }
 
 [type=checkbox]:checked+.checkable:after {
-  color: #111;
+  color: #09b500;
   background: none;
   transform: translateY(-50%);
   transition: all 0.3s;
@@ -4275,6 +4206,76 @@ select.stack:focus+select {
   right: 100%;
   top: 7px;
 }
+/* Basscss Type Scale */
+
+.h00 { font-size: var(--h00) }
+.h0 { font-size: var(--h0) }
+.h1 { font-size: var(--h1) }
+.h2 { font-size: var(--h2) }
+.h3 { font-size: var(--h3) }
+.h4 { font-size: var(--h4) }
+.h5 { font-size: var(--h5) }
+.h6 { font-size: var(--h6) }
+
+:root {
+  --h00: 4rem;
+  --h0: 3rem;
+  --h1: 2rem;
+  --h2: 1.5rem;
+  --h3: 1.25rem;
+  --h4: 1rem;
+  --h5: .875rem;
+  --h6: .75rem;
+}
+
+/* Basscss Typography */
+
+.font-family-inherit { font-family: inherit }
+.font-size-inherit { font-size: inherit }
+.text-decoration-none { text-decoration: none }
+
+.bold    { font-weight: var(--bold-font-weight, bold) }
+.regular { font-weight: normal }
+.italic  { font-style: italic }
+.caps    { text-transform: uppercase; letter-spacing: var(--caps-letter-spacing); }
+
+.left-align   { text-align: left }
+.center       { text-align: center }
+.right-align  { text-align: right }
+.justify      { text-align: justify }
+
+.nowrap { white-space: nowrap }
+.break-word { word-wrap: break-word }
+
+.line-height-1 { line-height: var(--line-height-1) }
+.line-height-2 { line-height: var(--line-height-2) }
+.line-height-3 { line-height: var(--line-height-3) }
+.line-height-4 { line-height: var(--line-height-4) }
+
+.list-style-none { list-style: none }
+.underline { text-decoration: underline }
+
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-reset {
+  list-style: none;
+  padding-left: 0;
+}
+
+:root {
+  --line-height-1: 1;
+  --line-height-2: 1.125;
+  --line-height-3: 1.25;
+  --line-height-4: 1.5;
+  --caps-letter-spacing: .2em;
+  --bold-font-weight: bold;
+}
+
 /* Basscss Layout */
 
 .inline       { display: inline }
@@ -4312,14 +4313,6 @@ select.stack:focus+select {
   --width-3: 48rem;
   --width-4: 64rem;
 }
-
-
-/* Basscss Align */
-
-.align-baseline { vertical-align: baseline }
-.align-top      { vertical-align: top }
-.align-middle   { vertical-align: middle }
-.align-bottom   { vertical-align: bottom }
 
 
 /* Basscss Margin */
@@ -4836,30 +4829,6 @@ select.stack:focus+select {
 @custom-media --breakpoint-sm (min-width: 40em);
 @custom-media --breakpoint-md (min-width: 52em);
 @custom-media --breakpoint-lg (min-width: 64em);
-/* Basscss Position */
-
-.relative { position: relative }
-.absolute { position: absolute }
-.fixed    { position: fixed }
-
-.top-0    { top: 0 }
-.right-0  { right: 0 }
-.bottom-0 { bottom: 0 }
-.left-0   { left: 0 }
-
-.z1 { z-index: var(--z1) }
-.z2 { z-index: var(--z2) }
-.z3 { z-index: var(--z3) }
-.z4 { z-index: var(--z4) }
-
-:root {
-  --z1: 1;
-  --z2: 2;
-  --z3: 3;
-  --z4: 4;
-}
-
-
 /* Basscss Border */
 
 .border {
@@ -4903,40 +4872,6 @@ select.stack:focus+select {
   --border-width: 0.0625rem; /* 1px */
   --border-radius: 0.3125rem; /* 5px */
 }
-
-
-/* Basscss Hide */
-
-.hide {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-@media (--breakpoint-xs) {
-  .xs-hide { display: none !important }
-}
-
-@media (--breakpoint-sm-md) {
-  .sm-hide { display: none !important }
-}
-
-@media (--breakpoint-md-lg) {
-  .md-hide { display: none !important }
-}
-
-@media (--breakpoint-lg) {
-  .lg-hide { display: none !important }
-}
-
-.display-none { display: none !important }
-
-@custom-media --breakpoint-xs (max-width: 40em);
-@custom-media --breakpoint-sm-md (min-width: 40em) and (max-width: 52em);
-@custom-media --breakpoint-md-lg (min-width: 52em) and (max-width: 64em);
-@custom-media --breakpoint-lg (min-width: 64em);
 
 
 @font-face {
@@ -5051,6 +4986,64 @@ tr {
     box-shadow: 0px 0px 1px 0px rgba(104, 104, 104, 1) inset;
     /* border: 1px solid rgb(104, 104, 104, 1); */
 }
+/* Basscss Position */
+
+.relative { position: relative }
+.absolute { position: absolute }
+.fixed    { position: fixed }
+
+.top-0    { top: 0 }
+.right-0  { right: 0 }
+.bottom-0 { bottom: 0 }
+.left-0   { left: 0 }
+
+.z1 { z-index: var(--z1) }
+.z2 { z-index: var(--z2) }
+.z3 { z-index: var(--z3) }
+.z4 { z-index: var(--z4) }
+
+:root {
+  --z1: 1;
+  --z2: 2;
+  --z3: 3;
+  --z4: 4;
+}
+
+
+/* Basscss Hide */
+
+.hide {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@media (--breakpoint-xs) {
+  .xs-hide { display: none !important }
+}
+
+@media (--breakpoint-sm-md) {
+  .sm-hide { display: none !important }
+}
+
+@media (--breakpoint-md-lg) {
+  .md-hide { display: none !important }
+}
+
+@media (--breakpoint-lg) {
+  .lg-hide { display: none !important }
+}
+
+.display-none { display: none !important }
+
+@custom-media --breakpoint-xs (max-width: 40em);
+@custom-media --breakpoint-sm-md (min-width: 40em) and (max-width: 52em);
+@custom-media --breakpoint-md-lg (min-width: 52em) and (max-width: 64em);
+@custom-media --breakpoint-lg (min-width: 64em);
+
+
 /*
 
   COLORS
@@ -5170,4 +5163,12 @@ tr {
 .stroke-gray { stroke: #AAAAAA; }
 .stroke-silver { stroke: #DDDDDD; }
 .stroke-black { stroke: #111111; }
+
+
+/* Basscss Align */
+
+.align-baseline { vertical-align: baseline }
+.align-top      { vertical-align: top }
+.align-middle   { vertical-align: middle }
+.align-bottom   { vertical-align: bottom }
 
