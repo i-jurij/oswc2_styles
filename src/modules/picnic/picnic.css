@@ -693,7 +693,7 @@ select[multiple] {
 [type=radio]+.checkable:hover:before,
 [type=checkbox]:focus+.checkable:before,
 [type=radio]:focus+.checkable:before {
-  border: 2px solid #09b500;
+  border: 1px solid #09b500;
 }
 
 [type=checkbox]+.checkable,
@@ -733,7 +733,6 @@ select[multiple] {
 
 [type=checkbox]:checked+.checkable:after,
 [type=radio]:checked+.checkable:after {
-  border: 1px solid #09b500;
   background: #1a9d00;
   transform: scale(0.5) translateY(-100%);
 }
