@@ -1,3 +1,25 @@
+/* Basscss Type Scale */
+
+.h00 { font-size: var(--h00) }
+.h0 { font-size: var(--h0) }
+.h1 { font-size: var(--h1) }
+.h2 { font-size: var(--h2) }
+.h3 { font-size: var(--h3) }
+.h4 { font-size: var(--h4) }
+.h5 { font-size: var(--h5) }
+.h6 { font-size: var(--h6) }
+
+:root {
+  --h00: 4rem;
+  --h0: 3rem;
+  --h1: 2rem;
+  --h2: 1.5rem;
+  --h3: 1.25rem;
+  --h4: 1rem;
+  --h5: .875rem;
+  --h6: .75rem;
+}
+
 /* PICNIC CSS */
 /**
  * 1. Set default font family to sans-serif.
@@ -395,7 +417,8 @@ body {
   color: var(--fontcolor-light);
   font-size: 1.1em;
   line-height: 1.5;
-  background: var(--bgcolor-content);
+  /* background: var(--bgcolor-content); */
+  background: var(--bgcolor-body);
   text-shadow: var(--fontshadow);
 }
 
@@ -4205,28 +4228,6 @@ select.stack:focus+select {
   right: 100%;
   top: 7px;
 }
-/* Basscss Type Scale */
-
-.h00 { font-size: var(--h00) }
-.h0 { font-size: var(--h0) }
-.h1 { font-size: var(--h1) }
-.h2 { font-size: var(--h2) }
-.h3 { font-size: var(--h3) }
-.h4 { font-size: var(--h4) }
-.h5 { font-size: var(--h5) }
-.h6 { font-size: var(--h6) }
-
-:root {
-  --h00: 4rem;
-  --h0: 3rem;
-  --h1: 2rem;
-  --h2: 1.5rem;
-  --h3: 1.25rem;
-  --h4: 1rem;
-  --h5: .875rem;
-  --h6: .75rem;
-}
-
 /* Basscss Typography */
 
 .font-family-inherit { font-family: inherit }
@@ -4860,40 +4861,6 @@ select.stack:focus+select {
 }
 
 
-/* Basscss Hide */
-
-.hide {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-@media (--breakpoint-xs) {
-  .xs-hide { display: none !important }
-}
-
-@media (--breakpoint-sm-md) {
-  .sm-hide { display: none !important }
-}
-
-@media (--breakpoint-md-lg) {
-  .md-hide { display: none !important }
-}
-
-@media (--breakpoint-lg) {
-  .lg-hide { display: none !important }
-}
-
-.display-none { display: none !important }
-
-@custom-media --breakpoint-xs (max-width: 40em);
-@custom-media --breakpoint-sm-md (min-width: 40em) and (max-width: 52em);
-@custom-media --breakpoint-md-lg (min-width: 52em) and (max-width: 64em);
-@custom-media --breakpoint-lg (min-width: 64em);
-
-
 /* Basscss Border */
 
 .border {
@@ -4939,6 +4906,153 @@ select.stack:focus+select {
 }
 
 
+/* Basscss Hide */
+
+.hide {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@media (--breakpoint-xs) {
+  .xs-hide { display: none !important }
+}
+
+@media (--breakpoint-sm-md) {
+  .sm-hide { display: none !important }
+}
+
+@media (--breakpoint-md-lg) {
+  .md-hide { display: none !important }
+}
+
+@media (--breakpoint-lg) {
+  .lg-hide { display: none !important }
+}
+
+.display-none { display: none !important }
+
+@custom-media --breakpoint-xs (max-width: 40em);
+@custom-media --breakpoint-sm-md (min-width: 40em) and (max-width: 52em);
+@custom-media --breakpoint-md-lg (min-width: 52em) and (max-width: 64em);
+@custom-media --breakpoint-lg (min-width: 64em);
+
+
+@font-face {
+    font-family: 'local';
+    src:
+        local('Segoe UI'),
+        local('Arial'),
+        local('Cantarell'),
+        local('Helvetica Neue'),
+        local("Liberation Sans"),
+        local('Ubuntu'),
+        local("Droid Sans"),
+        local("Roboto"),
+        local('Open Sans');
+    font-weight: 800;
+    font-style: normal;
+}
+
+:root {
+    --biggest-fontsize: 2rem;
+    --big-fontsize: 1.5rem;
+    --base-fontsize: 1.125rem;
+    --middle-fontsize: 1rem;
+    --small-fontsize: 0.875rem;
+    --smallest-fontsize: 0.75rem;
+    --micro-fontsize: 0.625rem;
+    --radius: 0.4rem;
+    --bgcolor-body: #0b0e0a;
+    --bgcolor: #135e07;
+    --bgcolor-content: #21281f;
+    --button-bgcolor: #135e07;
+    --button-color: #d3e4bb;
+    --button-active-bgcolor: #000000c8;
+    --button-active-color: #9eb183;
+    --button-disabled-color: black;
+    --input_bgcolor: rgb(6, 9, 3);
+
+    --fontcolor-light: #c0ccb9;
+    --fontcolor-dark: #1CBADF;
+
+    --fontshadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+    --boxshadow: rgba(0, 0, 0, 0.6) 0px 2px 2px 0px, rgba(0, 0, 0, 0.6) 0px 3px 1px -2px, rgba(0, 0, 0, 0.6) 0px 1px 5px 0px;
+    --boxshadow-active: rgba(0, 0, 0, 0.24) 1px 3px 3px 1px, rgba(0, 0, 0, 0.3) 1px 4px 2px -3px, rgba(0, 0, 0, 0.2) 1px 2px 6px 1px;
+
+    --date_time_item_back: #535353;
+    --date_time_item_back-active: #9F091F;
+    --date_time_item_back-disabled: #364135;
+    --date_time_item_color-disabled: #676767;
+
+    --table-bgcolor1: #2b3428;
+    --table-bgcolor2: #192316;
+
+    --table-border: 1px solid #000;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+input[type="number"]:invalid,
+input[type="time"]:invalid,
+input[type="text"]:invalid,
+input[type="tel"]:invalid,
+input[type="email"]:invalid,
+input[type="password"]:invalid,
+textarea:invalid {
+    border-bottom: 2px solid red;
+}
+
+input[type="number"]:valid,
+input[type="time"]:valid,
+input[type="text"]:valid,
+input[type="tel"]:valid,
+input[type="email"]:valid,
+input[type="password"]:valid,
+textarea:valid {
+    border-bottom: 2px solid green;
+}
+
+.select {
+    background-color: var(--input_bgcolor);
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236D6D6D%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, #333b33 0%, #030702 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+}
+
+.select>option {
+    font-size: var(--base-fontsize);
+    background-color: var(--bgcolor-content);
+    background-image: none;
+    border: 1px solid #999;
+}
+
+.select:disabled {
+    color: var(--date_time_item_color-disabled);
+}
+
+table {
+    border: var(--table-border);
+}
+
+tr {
+    background: var(--table-bgcolor1);
+}
+
+.modal .overlay~*,
+.card {
+    -webkit-box-shadow: 0px 0px 1px 0px rgba(104, 104, 104, 1) inset;
+    -moz-box-shadow: 0px 0px 1px 0px rgba(104, 104, 104, 1) inset;
+    box-shadow: 0px 0px 1px 0px rgba(104, 104, 104, 1) inset;
+    /* border: 1px solid rgb(104, 104, 104, 1); */
+}
 /*
 
   COLORS
@@ -5059,116 +5173,3 @@ select.stack:focus+select {
 .stroke-silver { stroke: #DDDDDD; }
 .stroke-black { stroke: #111111; }
 
-
-@font-face {
-    font-family: 'local';
-    src:
-        local('Segoe UI'),
-        local('Arial'),
-        local('Cantarell'),
-        local('Helvetica Neue'),
-        local("Liberation Sans"),
-        local('Ubuntu'),
-        local("Droid Sans"),
-        local("Roboto"),
-        local('Open Sans');
-    font-weight: 800;
-    font-style: normal;
-}
-
-:root {
-    --biggest-fontsize: 2rem;
-    --big-fontsize: 1.5rem;
-    --base-fontsize: 1.125rem;
-    --middle-fontsize: 1rem;
-    --small-fontsize: 0.875rem;
-    --smallest-fontsize: 0.75rem;
-    --micro-fontsize: 0.625rem;
-    --radius: 0.4rem;
-    --bgcolor: #135e07;
-    --bgcolor-content: #21281f;
-    --button-bgcolor: #135e07;
-    --button-color: #d3e4bb;
-    --button-active-bgcolor: #000000c8;
-    --button-active-color: #9eb183;
-    --button-disabled-color: black;
-    --input_bgcolor: rgb(6, 9, 3);
-
-    --fontcolor-light: #c0ccb9;
-    --fontcolor-dark: #1CBADF;
-
-    --fontshadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
-    --boxshadow: rgba(0, 0, 0, 0.6) 0px 2px 2px 0px, rgba(0, 0, 0, 0.6) 0px 3px 1px -2px, rgba(0, 0, 0, 0.6) 0px 1px 5px 0px;
-    --boxshadow-active: rgba(0, 0, 0, 0.24) 1px 3px 3px 1px, rgba(0, 0, 0, 0.3) 1px 4px 2px -3px, rgba(0, 0, 0, 0.2) 1px 2px 6px 1px;
-
-    --date_time_item_back: #535353;
-    --date_time_item_back-active: #9F091F;
-    --date_time_item_back-disabled: #364135;
-    --date_time_item_color-disabled: #676767;
-
-    --table-bgcolor1: #2b3428;
-    --table-bgcolor2: #192316;
-
-    --table-border: 1px solid #000;
-}
-
-html {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-
-input[type="number"]:invalid,
-input[type="time"]:invalid,
-input[type="text"]:invalid,
-input[type="tel"]:invalid,
-input[type="email"]:invalid,
-input[type="password"]:invalid,
-textarea:invalid {
-    border-bottom: 2px solid red;
-}
-
-input[type="number"]:valid,
-input[type="time"]:valid,
-input[type="text"]:valid,
-input[type="tel"]:valid,
-input[type="email"]:valid,
-input[type="password"]:valid,
-textarea:valid {
-    border-bottom: 2px solid green;
-}
-
-.select {
-    background-color: var(--input_bgcolor);
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236D6D6D%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, #333b33 0%, #030702 100%);
-    background-repeat: no-repeat, repeat;
-    background-position: right .7em top 50%, 0 0;
-    background-size: .65em auto, 100%;
-}
-
-.select>option {
-    font-size: var(--base-fontsize);
-    background-color: var(--bgcolor-content);
-    background-image: none;
-    border: 1px solid #999;
-}
-
-.select:disabled {
-    color: var(--date_time_item_color-disabled);
-}
-
-table {
-    border: var(--table-border);
-}
-
-tr {
-    background: var(--table-bgcolor1);
-}
-
-.modal .overlay~*,
-.card {
-    -webkit-box-shadow: 0px 0px 1px 0px rgba(104, 104, 104, 1) inset;
-    -moz-box-shadow: 0px 0px 1px 0px rgba(104, 104, 104, 1) inset;
-    box-shadow: 0px 0px 1px 0px rgba(104, 104, 104, 1) inset;
-    /* border: 1px solid rgb(104, 104, 104, 1); */
-}

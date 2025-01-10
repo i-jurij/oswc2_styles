@@ -395,7 +395,8 @@ body {
   color: var(--fontcolor-light);
   font-size: 1.1em;
   line-height: 1.5;
-  background: var(--bgcolor-content);
+  /* background: var(--bgcolor-content); */
+  background: var(--bgcolor-body);
   text-shadow: var(--fontshadow);
 }
 
