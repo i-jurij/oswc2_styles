@@ -1,20 +1,22 @@
+/* Basscss Flexbox */
+
 .flex {
   display: flex
 }
 
-@media (--breakpoint-sm) {
+@media all and (min-width: 40em) {
   .sm-flex {
     display: flex
   }
 }
 
-@media (--breakpoint-md) {
+@media all and (min-width: 52em) {
   .md-flex {
     display: flex
   }
 }
 
-@media (--breakpoint-lg) {
+@media all and (min-width: 64em) {
   .lg-flex {
     display: flex
   }
@@ -148,7 +150,3 @@
 .order-last {
   order: 99999
 }
-
-@custom-media --breakpoint-sm (min-width: 40em);
-@custom-media --breakpoint-md (min-width: 52em);
-@custom-media --breakpoint-lg (min-width: 64em);
