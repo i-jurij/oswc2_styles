@@ -494,7 +494,7 @@ button.success,
 .success[type=submit],
 .success.label,
 .success[data-tooltip]:after {
-  background: #2ecc40;
+  background: var(--success_bg);
 }
 
 .warning.dropimage,
@@ -503,7 +503,7 @@ button.warning,
 .warning[type=submit],
 .warning.label,
 .warning[data-tooltip]:after {
-  background: #ff851b;
+  background: var(--warning_bg);
 }
 
 .error.dropimage,
@@ -512,7 +512,7 @@ button.error,
 .error[type=submit],
 .error.label,
 .error[data-tooltip]:after {
-  background: #ff4136;
+  background:var(--error_bg);
 }
 
 .pseudo.dropimage,

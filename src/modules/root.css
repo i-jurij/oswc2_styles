@@ -33,6 +33,10 @@
     --button-disabled-color: black;
     --input_bgcolor: rgb(6, 9, 3);
 
+    --success_bg: #005d0b;
+    --warning_bg: #b95700;
+    --error_bg: #9e0800;
+
     --fontcolor-light: #c0ccb9;
     --fontcolor-dark: #1CBADF;
 
