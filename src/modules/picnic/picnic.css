@@ -512,7 +512,7 @@ button.error,
 .error[type=submit],
 .error.label,
 .error[data-tooltip]:after {
-  background:var(--error_bg);
+  background: var(--error_bg);
 }
 
 .pseudo.dropimage,
@@ -3719,7 +3719,8 @@ select.stack:focus+select {
   position: relative;
   box-shadow: none;
   border-radius: 0.2em;
-  border: 1px solid #aaa;
+  /* border: 1px solid #aaa; */
+  box-shadow: var(--boxshadow);
   overflow: hidden;
   text-align: left;
   background: var(--bgcolor-content);
