@@ -1,3 +1,73 @@
+/* Basscss Typography */
+
+.font-family-inherit { font-family: inherit }
+.font-size-inherit { font-size: inherit }
+.text-decoration-none { text-decoration: none }
+
+.bold    { font-weight: var(--bold-font-weight, bold) }
+.regular { font-weight: normal }
+.italic  { font-style: italic }
+.caps    { text-transform: uppercase; letter-spacing: var(--caps-letter-spacing); }
+
+.left-align   { text-align: left }
+.center       { text-align: center }
+.right-align  { text-align: right }
+.justify      { text-align: justify }
+
+.nowrap { white-space: nowrap }
+.break-word { word-wrap: break-word }
+
+.line-height-1 { line-height: var(--line-height-1) }
+.line-height-2 { line-height: var(--line-height-2) }
+.line-height-3 { line-height: var(--line-height-3) }
+.line-height-4 { line-height: var(--line-height-4) }
+
+.list-style-none { list-style: none }
+.underline { text-decoration: underline }
+
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-reset {
+  list-style: none;
+  padding-left: 0;
+}
+
+:root {
+  --line-height-1: 1;
+  --line-height-2: 1.125;
+  --line-height-3: 1.25;
+  --line-height-4: 1.5;
+  --caps-letter-spacing: .2em;
+  --bold-font-weight: bold;
+}
+
+/* Basscss Type Scale */
+
+.h00 { font-size: var(--h00) }
+.h0 { font-size: var(--h0) }
+.h1 { font-size: var(--h1) }
+.h2 { font-size: var(--h2) }
+.h3 { font-size: var(--h3) }
+.h4 { font-size: var(--h4) }
+.h5 { font-size: var(--h5) }
+.h6 { font-size: var(--h6) }
+
+:root {
+  --h00: 4rem;
+  --h0: 3rem;
+  --h1: 2rem;
+  --h2: 1.5rem;
+  --h3: 1.25rem;
+  --h4: 1rem;
+  --h5: .875rem;
+  --h6: .75rem;
+}
+
 /* PICNIC CSS */
 /**
  * 1. Set default font family to sans-serif.
@@ -3719,8 +3789,7 @@ select.stack:focus+select {
   position: relative;
   box-shadow: none;
   border-radius: 0.2em;
-  /* border: 1px solid #aaa; */
-  box-shadow: var(--boxshadow);
+  border: 1px solid #060906;
   overflow: hidden;
   text-align: left;
   background: var(--bgcolor-content);
@@ -4215,27 +4284,44 @@ select.stack:focus+select {
 .align-bottom   { vertical-align: bottom }
 
 
-/* Basscss Type Scale */
+/* Basscss Layout */
 
-.h00 { font-size: var(--h00) }
-.h0 { font-size: var(--h0) }
-.h1 { font-size: var(--h1) }
-.h2 { font-size: var(--h2) }
-.h3 { font-size: var(--h3) }
-.h4 { font-size: var(--h4) }
-.h5 { font-size: var(--h5) }
-.h6 { font-size: var(--h6) }
+.inline       { display: inline }
+.block        { display: block }
+.inline-block { display: inline-block }
+.table        { display: table }
+.table-cell   { display: table-cell }
+
+.overflow-hidden { overflow: hidden }
+.overflow-scroll { overflow: scroll }
+.overflow-auto   { overflow: auto }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table
+}
+.clearfix:after { clear: both }
+
+.left  { float: left }
+.right { float: right }
+
+.fit { max-width: 100% }
+
+.max-width-1 { max-width: var(--width-1) }
+.max-width-2 { max-width: var(--width-2) }
+.max-width-3 { max-width: var(--width-3) }
+.max-width-4 { max-width: var(--width-4) }
+
+.border-box { box-sizing: border-box }
 
 :root {
-  --h00: 4rem;
-  --h0: 3rem;
-  --h1: 2rem;
-  --h2: 1.5rem;
-  --h3: 1.25rem;
-  --h4: 1rem;
-  --h5: .875rem;
-  --h6: .75rem;
+  --width-1: 24rem;
+  --width-2: 32rem;
+  --width-3: 48rem;
+  --width-4: 64rem;
 }
+
 
 /* Basscss Margin */
 
@@ -4349,113 +4435,157 @@ select.stack:focus+select {
 }
 
 
-/* Basscss Typography */
+/* Basscss Flexbox */
 
-.font-family-inherit { font-family: inherit }
-.font-size-inherit { font-size: inherit }
-.text-decoration-none { text-decoration: none }
-
-.bold    { font-weight: var(--bold-font-weight, bold) }
-.regular { font-weight: normal }
-.italic  { font-style: italic }
-.caps    { text-transform: uppercase; letter-spacing: var(--caps-letter-spacing); }
-
-.left-align   { text-align: left }
-.center       { text-align: center }
-.right-align  { text-align: right }
-.justify      { text-align: justify }
-
-.nowrap { white-space: nowrap }
-.break-word { word-wrap: break-word }
-
-.line-height-1 { line-height: var(--line-height-1) }
-.line-height-2 { line-height: var(--line-height-2) }
-.line-height-3 { line-height: var(--line-height-3) }
-.line-height-4 { line-height: var(--line-height-4) }
-
-.list-style-none { list-style: none }
-.underline { text-decoration: underline }
-
-.truncate {
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.flex {
+  display: flex
 }
 
-.list-reset {
-  list-style: none;
-  padding-left: 0;
-}
-
-:root {
-  --line-height-1: 1;
-  --line-height-2: 1.125;
-  --line-height-3: 1.25;
-  --line-height-4: 1.5;
-  --caps-letter-spacing: .2em;
-  --bold-font-weight: bold;
-}
-
-/* Basscss Position */
-
-.relative { position: relative }
-.absolute { position: absolute }
-.fixed    { position: fixed }
-
-.top-0    { top: 0 }
-.right-0  { right: 0 }
-.bottom-0 { bottom: 0 }
-.left-0   { left: 0 }
-
-.z1 { z-index: var(--z1) }
-.z2 { z-index: var(--z2) }
-.z3 { z-index: var(--z3) }
-.z4 { z-index: var(--z4) }
-
-:root {
-  --z1: 1;
-  --z2: 2;
-  --z3: 3;
-  --z4: 4;
-}
-
-
-/* Basscss Hide */
-.hide {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-@media all and(max-width: 40em) {
-  .xs-hide {
-    display: none !important
+@media all and (min-width: 40em) {
+  .sm-flex {
+    display: flex
   }
 }
 
-@media (min-width: 40em) and (max-width: 52em) {
-  .sm-hide {
-    display: none !important
+@media all and (min-width: 52em) {
+  .md-flex {
+    display: flex
   }
 }
 
-@media (min-width: 52em) and (max-width: 64em) {
-  .md-hide {
-    display: none !important
+@media all and (min-width: 64em) {
+  .lg-flex {
+    display: flex
   }
 }
 
-@media (min-width: 64em) {
-  .lg-hide {
-    display: none !important
-  }
+.flex-column {
+  flex-direction: column
 }
 
-.display-none {
-  display: none !important
+.flex-wrap {
+  flex-wrap: wrap
+}
+
+.items-start {
+  align-items: flex-start
+}
+
+.items-end {
+  align-items: flex-end
+}
+
+.items-center {
+  align-items: center
+}
+
+.items-baseline {
+  align-items: baseline
+}
+
+.items-stretch {
+  align-items: stretch
+}
+
+.self-start {
+  align-self: flex-start
+}
+
+.self-end {
+  align-self: flex-end
+}
+
+.self-center {
+  align-self: center
+}
+
+.self-baseline {
+  align-self: baseline
+}
+
+.self-stretch {
+  align-self: stretch
+}
+
+.justify-start {
+  justify-content: flex-start
+}
+
+.justify-end {
+  justify-content: flex-end
+}
+
+.justify-center {
+  justify-content: center
+}
+
+.justify-between {
+  justify-content: space-between
+}
+
+.justify-around {
+  justify-content: space-around
+}
+
+.justify-evenly {
+  justify-content: space-evenly
+}
+
+.content-start {
+  align-content: flex-start
+}
+
+.content-end {
+  align-content: flex-end
+}
+
+.content-center {
+  align-content: center
+}
+
+.content-between {
+  align-content: space-between
+}
+
+.content-around {
+  align-content: space-around
+}
+
+.content-stretch {
+  align-content: stretch
+}
+
+/* 1. Fix for Chrome 44 bug. https://code.google.com/p/chromium/issues/detail?id=506893 */
+.flex-auto {
+  flex: 1 1 auto;
+  min-width: 0;
+  /* 1 */
+  min-height: 0;
+  /* 1 */
+}
+
+.flex-none {
+  flex: none
+}
+
+.order-0 {
+  order: 0
+}
+
+.order-1 {
+  order: 1
+}
+
+.order-2 {
+  order: 2
+}
+
+.order-3 {
+  order: 3
+}
+
+.order-last {
+  order: 99999
 }
 /* Basscss Grid */
 .col {
@@ -4701,42 +4831,108 @@ select.stack:focus+select {
     }
 
 }
-/* Basscss Layout */
+/* Basscss Position */
 
-.inline       { display: inline }
-.block        { display: block }
-.inline-block { display: inline-block }
-.table        { display: table }
-.table-cell   { display: table-cell }
+.relative { position: relative }
+.absolute { position: absolute }
+.fixed    { position: fixed }
 
-.overflow-hidden { overflow: hidden }
-.overflow-scroll { overflow: scroll }
-.overflow-auto   { overflow: auto }
+.top-0    { top: 0 }
+.right-0  { right: 0 }
+.bottom-0 { bottom: 0 }
+.left-0   { left: 0 }
 
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table
-}
-.clearfix:after { clear: both }
-
-.left  { float: left }
-.right { float: right }
-
-.fit { max-width: 100% }
-
-.max-width-1 { max-width: var(--width-1) }
-.max-width-2 { max-width: var(--width-2) }
-.max-width-3 { max-width: var(--width-3) }
-.max-width-4 { max-width: var(--width-4) }
-
-.border-box { box-sizing: border-box }
+.z1 { z-index: var(--z1) }
+.z2 { z-index: var(--z2) }
+.z3 { z-index: var(--z3) }
+.z4 { z-index: var(--z4) }
 
 :root {
-  --width-1: 24rem;
-  --width-2: 32rem;
-  --width-3: 48rem;
-  --width-4: 64rem;
+  --z1: 1;
+  --z2: 2;
+  --z3: 3;
+  --z4: 4;
+}
+
+
+/* Basscss Hide */
+.hide {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@media all and(max-width: 40em) {
+  .xs-hide {
+    display: none !important
+  }
+}
+
+@media (min-width: 40em) and (max-width: 52em) {
+  .sm-hide {
+    display: none !important
+  }
+}
+
+@media (min-width: 52em) and (max-width: 64em) {
+  .md-hide {
+    display: none !important
+  }
+}
+
+@media (min-width: 64em) {
+  .lg-hide {
+    display: none !important
+  }
+}
+
+.display-none {
+  display: none !important
+}
+/* Basscss Border */
+
+.border {
+  border-style: solid;
+  border-width: var(--border-width);
+}
+
+.border-none { border: 0 }
+
+.border-top {
+  border-top-style: solid;
+  border-top-width: var(--border-width);
+}
+
+.border-right {
+  border-right-style: solid;
+  border-right-width: var(--border-width);
+}
+
+.border-bottom {
+  border-bottom-style: solid;
+  border-bottom-width: var(--border-width);
+}
+
+.border-left {
+  border-left-style: solid;
+  border-left-width: var(--border-width);
+}
+
+.rounded { border-radius: var(--border-radius) }
+.circle  { border-radius: 50% }
+
+.not-rounded { border-radius: 0 }
+
+.rounded-top    { border-radius: var(--border-radius) var(--border-radius) 0 0 }
+.rounded-right  { border-radius: 0 var(--border-radius) var(--border-radius) 0 }
+.rounded-bottom { border-radius: 0 0 var(--border-radius) var(--border-radius) }
+.rounded-left   { border-radius: var(--border-radius) 0 0 var(--border-radius) }
+
+:root {
+  --border-width: 0.0625rem; /* 1px */
+  --border-radius: 0.3125rem; /* 5px */
 }
 
 
@@ -4859,203 +5055,6 @@ select.stack:focus+select {
 .stroke-gray { stroke: #AAAAAA; }
 .stroke-silver { stroke: #DDDDDD; }
 .stroke-black { stroke: #111111; }
-
-
-/* Basscss Flexbox */
-
-.flex {
-  display: flex
-}
-
-@media all and (min-width: 40em) {
-  .sm-flex {
-    display: flex
-  }
-}
-
-@media all and (min-width: 52em) {
-  .md-flex {
-    display: flex
-  }
-}
-
-@media all and (min-width: 64em) {
-  .lg-flex {
-    display: flex
-  }
-}
-
-.flex-column {
-  flex-direction: column
-}
-
-.flex-wrap {
-  flex-wrap: wrap
-}
-
-.items-start {
-  align-items: flex-start
-}
-
-.items-end {
-  align-items: flex-end
-}
-
-.items-center {
-  align-items: center
-}
-
-.items-baseline {
-  align-items: baseline
-}
-
-.items-stretch {
-  align-items: stretch
-}
-
-.self-start {
-  align-self: flex-start
-}
-
-.self-end {
-  align-self: flex-end
-}
-
-.self-center {
-  align-self: center
-}
-
-.self-baseline {
-  align-self: baseline
-}
-
-.self-stretch {
-  align-self: stretch
-}
-
-.justify-start {
-  justify-content: flex-start
-}
-
-.justify-end {
-  justify-content: flex-end
-}
-
-.justify-center {
-  justify-content: center
-}
-
-.justify-between {
-  justify-content: space-between
-}
-
-.justify-around {
-  justify-content: space-around
-}
-
-.justify-evenly {
-  justify-content: space-evenly
-}
-
-.content-start {
-  align-content: flex-start
-}
-
-.content-end {
-  align-content: flex-end
-}
-
-.content-center {
-  align-content: center
-}
-
-.content-between {
-  align-content: space-between
-}
-
-.content-around {
-  align-content: space-around
-}
-
-.content-stretch {
-  align-content: stretch
-}
-
-/* 1. Fix for Chrome 44 bug. https://code.google.com/p/chromium/issues/detail?id=506893 */
-.flex-auto {
-  flex: 1 1 auto;
-  min-width: 0;
-  /* 1 */
-  min-height: 0;
-  /* 1 */
-}
-
-.flex-none {
-  flex: none
-}
-
-.order-0 {
-  order: 0
-}
-
-.order-1 {
-  order: 1
-}
-
-.order-2 {
-  order: 2
-}
-
-.order-3 {
-  order: 3
-}
-
-.order-last {
-  order: 99999
-}
-/* Basscss Border */
-
-.border {
-  border-style: solid;
-  border-width: var(--border-width);
-}
-
-.border-none { border: 0 }
-
-.border-top {
-  border-top-style: solid;
-  border-top-width: var(--border-width);
-}
-
-.border-right {
-  border-right-style: solid;
-  border-right-width: var(--border-width);
-}
-
-.border-bottom {
-  border-bottom-style: solid;
-  border-bottom-width: var(--border-width);
-}
-
-.border-left {
-  border-left-style: solid;
-  border-left-width: var(--border-width);
-}
-
-.rounded { border-radius: var(--border-radius) }
-.circle  { border-radius: 50% }
-
-.not-rounded { border-radius: 0 }
-
-.rounded-top    { border-radius: var(--border-radius) var(--border-radius) 0 0 }
-.rounded-right  { border-radius: 0 var(--border-radius) var(--border-radius) 0 }
-.rounded-bottom { border-radius: 0 0 var(--border-radius) var(--border-radius) }
-.rounded-left   { border-radius: var(--border-radius) 0 0 var(--border-radius) }
-
-:root {
-  --border-width: 0.0625rem; /* 1px */
-  --border-radius: 0.3125rem; /* 5px */
-}
 
 
 @font-face {

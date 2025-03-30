@@ -3719,8 +3719,7 @@ select.stack:focus+select {
   position: relative;
   box-shadow: none;
   border-radius: 0.2em;
-  /* border: 1px solid #aaa; */
-  box-shadow: var(--boxshadow);
+  border: 1px solid #060906;
   overflow: hidden;
   text-align: left;
   background: var(--bgcolor-content);
